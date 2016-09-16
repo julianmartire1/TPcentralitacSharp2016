@@ -47,14 +47,15 @@ namespace CentralitaHerencia
         public void mostrar()
         {
             StringBuilder sb = new StringBuilder();
-            sb.AppendLine("La duracion de la llamada fue: " + this._duracion);
-            sb.AppendLine("El numero del destino fue de la llamada fue: " + this._nroDestino);
-            sb.AppendLine("El numero de origen es: " + this._nroOrigen);
+            sb.AppendLine("La duracion de la llamada fue: " + this.Duracion);
+            sb.AppendLine("El numero del destino fue de la llamada fue: " + this.NroDestino);
+            sb.AppendLine("El numero de origen es: " + this.NroOrigen);
+            sb.AppendLine();
 
             Console.Write(sb);
         }
 
-        public int OrdenarPorDuracion(Llamada uno, Llamada dos)
+        public static int OrdenarPorDuracion(Llamada uno, Llamada dos)
         {
             return string.Compare(uno._duracion.ToString(),dos._duracion.ToString());
         }

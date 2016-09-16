@@ -8,13 +8,26 @@ namespace CentralitaHerencia
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             Centralita miCentralita = new Centralita("Telefonica");
-            Local l1 = new Local("jorge", 30, "casa", 2.65f);
-            Provincial l2 = new Provincial("austaquio", 21, "casa2", Franja.Franja_1);
-            Local l3 = new Local("luis", 45, "casa3", 1.99f);
+            Local l1 = new Local("jorge", 30f, "casa", 2.65f);
+            Provincial l2 = new Provincial("austaquio", 21f, "casa2", Franja.Franja_1);
+            Local l3 = new Local("luis", 45f, "casa3", 1.99f);
             Provincial l4 = new Provincial(Franja.Franja_3,l2);
+
+
+            miCentralita.Llamadas.Add(l1);
+            miCentralita.Llamadas.Add(l2);
+            miCentralita.Llamadas.Add(l3);
+            miCentralita.Llamadas.Add(l4);
+
+            miCentralita.OrdenarLlamadas();
+
+            miCentralita.Mostrar();
+
+            Console.ReadKey();
+
         }
     }
 }

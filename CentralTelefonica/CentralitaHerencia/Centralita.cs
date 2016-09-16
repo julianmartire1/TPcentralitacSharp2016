@@ -24,7 +24,7 @@ namespace CentralitaHerencia
         {
             get
             {
-                throw new System.NotImplementedException();
+                return 1;
             }
 
         }
@@ -33,7 +33,7 @@ namespace CentralitaHerencia
         {
             get
             {
-                throw new System.NotImplementedException();
+                return 1;
             }
 
         }
@@ -49,10 +49,10 @@ namespace CentralitaHerencia
         
         public Centralita()
         {
-            
+            _listaDeLLamadas =new List<Llamada>();
         }
 
-        public Centralita(string nombreEmpresa)
+        public Centralita(string nombreEmpresa):this()
         {
             this._razonSocial = nombreEmpresa;
         }
@@ -78,11 +78,21 @@ namespace CentralitaHerencia
         public void Mostrar()
         {
             Console.WriteLine("La razon social: "+this._razonSocial);
+            /*Console.WriteLine("\nGanancia total: " + this.GananciaTotal);
+            Console.WriteLine("Ganancia total: " + this.GananciaPorProvincial);
+            Console.WriteLine("Ganancia total: " + this.GananciaPorLocal);*/
+
+            foreach (Llamada item in this._listaDeLLamadas)
+            {
+                item.mostrar();
+            }
+            
+
         }
 
         public void OrdenarLlamadas()
         {
-            
+            this._listaDeLLamadas.Sort(Llamada.OrdenarPorDuracion);            
         }
     }
 }

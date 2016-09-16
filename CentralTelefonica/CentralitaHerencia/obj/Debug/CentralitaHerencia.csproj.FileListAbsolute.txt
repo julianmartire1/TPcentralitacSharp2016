@@ -5,3 +5,9 @@ C:\Users\julian\Desktop\CentralTelefonica\CentralitaHerencia\bin\Debug\Centralit
 C:\Users\julian\Desktop\CentralTelefonica\CentralitaHerencia\obj\Debug\CentralitaHerencia.csprojResolveAssemblyReference.cache
 C:\Users\julian\Desktop\CentralTelefonica\CentralitaHerencia\obj\Debug\CentralitaHerencia.exe
 C:\Users\julian\Desktop\CentralTelefonica\CentralitaHerencia\obj\Debug\CentralitaHerencia.pdb
+C:\Users\julian\Desktop\Cuatrimestre 2\TPcentralitacSharp2016\CentralTelefonica\CentralitaHerencia\bin\Debug\CentralitaHerencia.exe.config
+C:\Users\julian\Desktop\Cuatrimestre 2\TPcentralitacSharp2016\CentralTelefonica\CentralitaHerencia\obj\Debug\CentralitaHerencia.exe
+C:\Users\julian\Desktop\Cuatrimestre 2\TPcentralitacSharp2016\CentralTelefonica\CentralitaHerencia\obj\Debug\CentralitaHerencia.pdb
+C:\Users\julian\Desktop\Cuatrimestre 2\TPcentralitacSharp2016\CentralTelefonica\CentralitaHerencia\bin\Debug\CentralitaHerencia.exe
+C:\Users\julian\Desktop\Cuatrimestre 2\TPcentralitacSharp2016\CentralTelefonica\CentralitaHerencia\bin\Debug\CentralitaHerencia.pdb
+C:\Users\julian\Desktop\Cuatrimestre 2\TPcentralitacSharp2016\CentralTelefonica\CentralitaHerencia\obj\Debug\CentralitaHerencia.csprojResolveAssemblyReference.cache
