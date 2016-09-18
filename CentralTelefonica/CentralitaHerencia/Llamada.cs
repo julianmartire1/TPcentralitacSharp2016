@@ -47,7 +47,7 @@ namespace CentralitaHerencia
         public void mostrar()
         {
             StringBuilder sb = new StringBuilder();
-            sb.AppendLine("La duracion de la llamada fue: " + this.Duracion);
+            sb.AppendLine("\nLa duracion de la llamada fue: " + this.Duracion);
             sb.AppendLine("El numero del destino fue de la llamada fue: " + this.NroDestino);
             sb.AppendLine("El numero de origen es: " + this.NroOrigen);
             sb.AppendLine();

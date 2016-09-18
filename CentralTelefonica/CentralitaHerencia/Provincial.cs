@@ -20,13 +20,12 @@ namespace CentralitaHerencia
 
         public Provincial(Franja miFranja, Llamada unaLlamada): this(unaLlamada.NroOrigen, unaLlamada.Duracion, unaLlamada.NroDestino, miFranja)            
         {
-            this._franjaHoraria = miFranja;
 
         }
 
         public Provincial(string origen, float duracion, string destino, Franja miFranja) : base(origen, destino, duracion)
         {
-                       
+            this._franjaHoraria = miFranja;                       
         }
        
 

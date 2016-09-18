@@ -15,7 +15,7 @@ namespace CentralitaHerencia
         {
             get
             {
-                throw new System.NotImplementedException();
+                return this.CalcularGanancia(TipoLlamada.Local);
             }
 
         }
@@ -24,7 +24,7 @@ namespace CentralitaHerencia
         {
             get
             {
-                return 1;
+                return this.CalcularGanancia(TipoLlamada.Provincial);
             }
 
         }
@@ -33,7 +33,7 @@ namespace CentralitaHerencia
         {
             get
             {
-                return 1;
+                return this.CalcularGanancia(TipoLlamada.Todas);
             }
 
         }
@@ -61,26 +61,75 @@ namespace CentralitaHerencia
 
         private float CalcularGanancia(TipoLlamada tipo)
         {
-            float Ganancia=0;
+            float retorno = 0,retorno2=0;
 
-            if (tipo == TipoLlamada.Local)
-                Ganancia = this.GananciaPorLocal;            
-            else            
-                if (tipo == TipoLlamada.Provincial)
-                    Ganancia = this.GananciaPorProvincial;                
-                else
-                    Ganancia = this.GananciaTotal;
+            switch (tipo)
+            {
+                case TipoLlamada.Local:
+
+                    Local local;
+
+                    foreach (var item in this._listaDeLLamadas)
+                    {
+                        if (item.GetType() == typeof(Local))
+                        {
+                            local = (Local)item;
+                            retorno += local.CostoLlamada;
+                        }
+                    }
+
+                    break;
+
+                case TipoLlamada.Provincial:
+
+                    Provincial prov;
+
+                    foreach (var item in this._listaDeLLamadas)
+                    {
+                        if (item.GetType() == typeof(Provincial))
+                        {
+                            prov = (Provincial)item;
+                            retorno += prov.CostoLlamada;
+                        }
+                    }
+
+                    break;
+                case TipoLlamada.Todas:
+
+                    Provincial prov2;
+                    Local local2;
+
+                    foreach (var item in this._listaDeLLamadas)
+                    {
+                        if (item.GetType() == typeof(Provincial))
+                        {
+                            prov2 = (Provincial)item;
+                            retorno += prov2.CostoLlamada;
+                        }
+                        else
+                        {
+                            if (item.GetType() == typeof(Local))
+                            {
+                                local2 = (Local)item;
+                                retorno2 += local2.CostoLlamada;
+                            }
+                        }
+                    }
+
+                    return retorno + retorno2;
+
+            }
             
 
-            return Ganancia;
+            return retorno;
         }
 
         public void Mostrar()
         {
             Console.WriteLine("La razon social: "+this._razonSocial);
-            /*Console.WriteLine("\nGanancia total: " + this.GananciaTotal);
-            Console.WriteLine("Ganancia total: " + this.GananciaPorProvincial);
-            Console.WriteLine("Ganancia total: " + this.GananciaPorLocal);*/
+            Console.WriteLine("\nGanancia total: " + this.GananciaTotal);
+            Console.WriteLine("Ganancia Provincial: " + this.GananciaPorProvincial);
+            Console.WriteLine("Ganancia Local: " + this.GananciaPorLocal);
 
             foreach (Llamada item in this._listaDeLLamadas)
             {
